@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+.npm/
+
+# Scratch & temporary logs
+scratch/
+*.log
+test_*.jpg
+test_*.png
+scratch_*.jpg
+
+# OS files
+Thumbs.db
+.DS_Store

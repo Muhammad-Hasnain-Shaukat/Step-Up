@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Complete Footwear Collection — STEP UP Atelier</title>
+  <meta name="description" content="Explore the complete collection of handcrafted Italian luxury footwear by Step Up Atelier. From runway sneakers and Goodyear oxfords to Austrian crystal stilettos and whole-cut boots.">
+  
+  <!-- Preconnect and Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* Collection Page Specific Header */
+    .collection-header-banner {
+      padding: 7.5rem 0 3.5rem;
+      background: radial-gradient(circle at 50% 30%, #ffffff 0%, #f4f0e8 100%);
+      border-bottom: 1px solid var(--border-subtle);
+      text-align: center;
+    }
+    .collection-breadcrumb {
+      font-size: 0.68rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #8b7152;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+    }
+    .collection-banner-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+    .collection-banner-desc {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    .collection-main-content {
+      padding: 3.5rem 0 6rem;
+      background: var(--bg-main);
+    }
+  </style>
+</head>
+<body class="page-collection">
+
+  <!-- ========================================================================
+       SLIM LUXURY FIXED HEADER / NAVBAR (EXACT HOMEPAGE DESIGN)
+       ======================================================================== -->
+  <header id="siteHeader" class="site-header nav-scrolled">
+    <div class="container header-inner">
+      <!-- Brand Identity with Athletic Speed Silhouette Logo -->
+      <a href="index.html" class="brand-logo" id="brandLogo" aria-label="Step Up Homepage">
+        <img src="assets/images/logo_white.png" alt="STEP UP Silhouette" class="brand-logo-img">
+        <span class="brand-name">STEP UP</span>
+      </a>
+
+      <!-- Synchronized Center Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="collection.html" class="nav-link active">Collection</a>
+        <a href="index.html#collections" class="nav-link">Favorites</a>
+        <a href="index.html#atelier" class="nav-link">The Atelier</a>
+        <a href="index.html#lookbook" class="nav-link">Lookbook</a>
+        <a href="index.html#bespoke" class="nav-link">Bespoke VIP</a>
+        <a href="index.html#boutiques" class="nav-link">Boutiques</a>
+      </nav>
+
+      <!-- Nav Actions (Search, Wishlist, Bag, Mobile Menu) -->
+      <div class="header-actions">
+        <!-- Search Button -->
+        <button id="openSearchBtn" class="action-icon-btn" aria-label="Search Silhouettes">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Wishlist Button -->
+        <button id="openWishlistBtn" class="action-icon-btn" aria-label="View Wishlist" onclick="showToast('Your Private Wishlist has 1 saved silhouette.')">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span id="wishlistCounter" class="badge-counter">1</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button id="openBagBtn" class="action-icon-btn" data-action="open-bag" aria-label="Open Shopping Bag">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span id="bagCounter" class="badge-counter">1</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Drawer -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer" aria-hidden="true">
+    <a href="index.html#hero" class="nav-link">Home / Campaign</a>
+    <a href="collection.html" class="nav-link active">Collection</a>
+    <a href="index.html#collections" class="nav-link">Featured Favorites</a>
+    <a href="index.html#atelier" class="nav-link">The Atelier & Craft</a>
+    <a href="index.html#lookbook" class="nav-link">Runway Lookbook</a>
+    <a href="index.html#bespoke" class="nav-link">Bespoke VIP Salon</a>
+    <a href="index.html#boutiques" class="nav-link">Boutiques & Salons</a>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         COLLECTION HERO BANNER
+         ====================================================================== -->
+    <section class="collection-header-banner">
+      <div class="container">
+        <span class="collection-breadcrumb">Maison Step Up Atelier • Lahore & Karachi</span>
+        <h1 class="collection-banner-title">The Complete Collection</h1>
+        <p class="collection-banner-desc">
+          Every silhouette is handcrafted in our Lahore and Karachi ateliers from full-grain leathers, lustrous silk satins, and Austrian crystals. Hand-lasted for anatomical poise and effortless elegance.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         COLLECTION CATALOG SECTION (ALL PRODUCTS ON CLEAN WHITE BACKGROUND)
+         ====================================================================== -->
+    <section id="catalog" class="collection-main-content">
+      <div class="container">
+        
+        <!-- Filter Tabs & Sorting Bar -->
+        <div class="catalog-controls-bar">
+          <div class="collection-filter-tabs">
+            <button class="tab-btn active" data-filter="all">All Styles <span class="tab-count">19</span></button>
+            <button class="tab-btn" data-filter="sneakers">Sneakers <span class="tab-count">8</span></button>
+            <button class="tab-btn" data-filter="loafers">Loafers & Dress <span class="tab-count">6</span></button>
+            <button class="tab-btn" data-filter="heels">Heels & Gala <span class="tab-count">4</span></button>
+            <button class="tab-btn" data-filter="boots">Boots <span class="tab-count">2</span></button>
+          </div>
+
+          <div class="catalog-sort-wrap">
+            <label for="catalogSortSelect" class="sort-label">Sort by:</label>
+            <div class="select-styled-wrap">
+              <select id="catalogSortSelect" class="luxury-sort-select" aria-label="Sort Collection">
+                <option value="featured">Curated Order</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Alphabetical (A-Z)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Master Products Grid (Dynamically rendered with 100% pure white bg images) -->
+        <div id="productsGridContainer" class="products-master-grid">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+
+        <!-- Trust & Savoir-Faire Bar -->
+        <div class="showcase-trust-bar" style="margin-top: 5rem;">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+            <span>FREE WORLDWIDE SHIPPING</span>
+          </div>
+
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+              <line x1="16" y1="8" x2="2" y2="22"></line>
+              <line x1="17.5" y1="15" x2="9" y2="15"></line>
+            </svg>
+            <span>PREMIUM MATERIALS</span>
+          </div>
+
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>BUILT TO LAST</span>
+          </div>
+
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>LOVED GLOBALLY</span>
+          </div>
+
+          <div class="trust-tagline">
+            WALK &nbsp;•&nbsp; EXPLORE &nbsp;•&nbsp; BELONG
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-header">
+            <img src="assets/images/logo_gold.png" alt="STEP UP Atelier Silhouette" class="footer-brand-logo-img">
+            <span class="brand-name">STEP UP</span>
+          </div>
+          <span class="brand-tagline">ATELIER LAHORE<span class="tagline-dot">&bull;</span>KARACHI</span>
+          <p class="footer-brand-desc">
+            The pinnacle of footwear architecture. Generational craftsmanship, uncompromised materials, and the timeless dignity of Pakistani bespoke leathercraft.
+          </p>
+          <div style="font-size:0.75rem; color:var(--gold-warm); letter-spacing:0.15em;">
+            PRIVATE CONCIERGE: +92 (0) 42 3578 8800 &nbsp;|&nbsp; WHATSAPP: +92 300 848 8800
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Maison</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#collections">The Silhouettes</a></li>
+            <li><a href="index.html#atelier">Atelier Savoir-Faire</a></li>
+            <li><a href="index.html#lookbook">Editorial Lookbook</a></li>
+            <li><a href="index.html#bespoke">Bespoke Fitting</a></li>
+            <li><a href="index.html#boutiques">Flagship Boutiques</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Client Care</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="showToast('Complimentary insured nationwide express delivery across Pakistan via TCS & Leopard Express.')">Insured Courier Delivery</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Complimentary lifetime resoling & reconditioning at our Gulberg Atelier, Lahore.')">Lifetime Resoling Guarantee</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Authenticity certificate embedded with tamper-proof cryptographic verification.')">NFC Digital Authenticity</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Hand-carved Himalayan cedar shoe trees included with all footwear.')">Shoe Care & Cedar Trees</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Private Concierge is online 24/7 via WhatsApp: +92 300 848 8800.')">Private Client Concierge</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-newsletter-box">
+          <h4>Private Client Gazette</h4>
+          <p>Receive private invitations to capsule previews, runway allocations, and bespoke salon dates.</p>
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Your private email" required>
+            <button type="submit" class="newsletter-btn">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 STEP UP FOOTWEAR ATELIER (PVT) LTD. ALL RIGHTS RESERVED. NTN: 8492014-7 | INCORPORATED IN PAKISTAN.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="javascript:void(0)">PRIVACY CHARTER</a>
+          <a href="javascript:void(0)">ETHICAL LEATHER PLEDGE</a>
+          <a href="javascript:void(0)">TERMS OF EXCLUSIVITY</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       SLIDE-OUT LUXURY SHOPPING BAG (CART DRAWER)
+       ======================================================================== -->
+  <div id="cartDrawerOverlay" class="cart-drawer-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Private Bag</h3>
+      <button id="closeCartDrawerBtn" class="close-drawer-btn" aria-label="Close Shopping Bag">✕</button>
+    </div>
+
+    <div id="cartItemsContainer" class="cart-body">
+      <!-- Injected dynamically by app.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Complimentary Express Courier</span>
+        <span style="color:#8b7152; font-weight:600;">Complimentary</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Bespoke Cedar Shoe Trees</span>
+        <span style="color:#8b7152; font-weight:600;">Included</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total Investment</span>
+        <span id="cartTotalAmount">€980</span>
+      </div>
+      <button id="checkoutBtn" class="checkout-btn">PROCEED TO SECURE CHECKOUT</button>
+      <div style="text-align:center; font-size:0.7rem; color:var(--text-muted); margin-top:0.8rem;">
+        Insured nationwide express dispatch across Pakistan from Gulberg, Lahore (TCS / Leopard / DHL).
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       PRODUCT QUICK VIEW MODAL
+       ======================================================================== -->
+  <div id="quickViewModal" class="modal-backdrop" aria-hidden="true">
+    <div class="quickview-container">
+      <button id="closeQuickViewBtn" class="close-modal-btn" aria-label="Close Quick View">✕</button>
+      <div class="quickview-grid">
+        <div class="quickview-media">
+          <img id="modalProductImage" src="assets/products/p13.png" alt="Footwear silhouette">
+        </div>
+        <div class="quickview-content">
+          <span id="modalProductCategory" class="quickview-category">Runway Sneaker</span>
+          <h2 id="modalProductTitle" class="quickview-title">The Stratus 01</h2>
+          <div id="modalProductPrice" class="quickview-price" data-eur-price="980">€980</div>
+          <p id="modalProductDesc" class="quickview-desc">
+            Handcrafted with French calfskin and Italian suede over an anatomical wooden last.
+          </p>
+
+          <div style="margin-bottom:1.2rem; font-size:0.82rem; color:var(--text-secondary); display:flex; flex-direction:column; gap:0.4rem;">
+            <div><strong>Origin:</strong> <span id="modalProductOrigin">Lahore, Pakistan</span></div>
+            <div><strong>Construction:</strong> <span id="modalProductConstruction">Blake Welted</span></div>
+          </div>
+
+          <!-- Size Selector -->
+          <div class="size-selector-title">
+            <span>Select Sizing (EU / US)</span>
+            <span class="size-guide-link" onclick="showToast('True to luxury Italian size. We advise ordering your typical dress shoe size.')">Fit Guidance</span>
+          </div>
+          <div class="size-pill-grid">
+            <!-- Dynamically populated by app.js -->
+          </div>
+
+          <!-- Monogram Personalization -->
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label class="form-label" for="modalMonogramInput">Bespoke Gold Foil Monogram (Optional, Max 3 letters)</label>
+            <input type="text" id="modalMonogramInput" class="form-input" maxlength="3" placeholder="e.g. S.U.">
+          </div>
+
+          <div class="modal-actions">
+            <button id="modalAddBagBtn" class="cta-luxury-btn" style="flex:1; justify-content:center;">
+              ADD TO SHOPPING BAG
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SEARCH MODAL OVERLAY
+       ======================================================================== -->
+  <div id="searchModal" class="search-modal-backdrop" aria-hidden="true">
+    <div class="search-container">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+        <span class="section-eyebrow" style="margin:0;">Maison Search</span>
+        <button id="closeSearchBtn" style="color:var(--text-primary); font-size:1.4rem;">✕</button>
+      </div>
+      <div class="search-input-wrapper">
+        <input type="text" id="catalogSearchInput" class="search-input" placeholder="Search boots, loafers, sneakers, heels..." autofocus>
+      </div>
+      <div id="searchResultsList" class="search-results-list">
+        <div style="color:var(--text-muted); padding:1rem;">Type a silhouette name, leather, or style...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Master Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

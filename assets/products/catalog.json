@@ -1,0 +1,349 @@
+[
+  {
+    "id": "p1",
+    "title": "The Gulberg Horsebit Loafer Pump",
+    "category": "loafers",
+    "categoryLabel": "Bespoke Loafer",
+    "priceEUR": 980,
+    "image": "assets/products/p1.png",
+    "badge": "Atelier Icon",
+    "badgeType": "craft",
+    "materials": "Full-grain Italian Nappa Calfskin, Brushed Gold Horsebit",
+    "description": "Handcrafted in Lahore with buttery cream calfskin and an architectural block heel, finished with artisanal brushed gold horsebit hardware.",
+    "construction": "Blake Stitch Leather Sole",
+    "origin": "Lahore, Pakistan",
+    "colors": [
+      "#ede8df",
+      "#c5a880",
+      "#1c1b1a"
+    ]
+  },
+  {
+    "id": "p2",
+    "title": "The Belladonna Crystal Bow Stiletto",
+    "category": "heels",
+    "categoryLabel": "Haute Evening",
+    "priceEUR": 1280,
+    "image": "assets/products/p2.png",
+    "badge": "Runway Exclusive",
+    "badgeType": "limited",
+    "materials": "Satin Noir, Hand-Set Baguette Crystal Bow, Silk Slingback",
+    "description": "A showstopping evening pump sculpted in lustrous noir silk satin, centered with a dual-loop Austrian crystal ribbon and 100mm cigarette heel.",
+    "construction": "Bespoke Haute Evening Last",
+    "origin": "Karachi, Pakistan",
+    "colors": [
+      "#111113",
+      "#e4e4e7"
+    ]
+  },
+  {
+    "id": "p3",
+    "title": "The Aurelia Champagne Stardust Pump",
+    "category": "heels",
+    "categoryLabel": "Gala Silhouette",
+    "priceEUR": 1350,
+    "image": "assets/products/p3.png",
+    "badge": "Limited Edition",
+    "badgeType": "limited",
+    "materials": "Micro-Crystal Glitter Fabric, Mirrored Pale Gold Metal Stiletto",
+    "description": "Reflecting luminous brilliance from every angle, the Aurelia combines hand-applied glitter tesserae with an ultra-fine mirrored metallic stem.",
+    "construction": "Hand-Carved Hornbeam Last",
+    "origin": "Lahore, Pakistan",
+    "colors": [
+      "#dfc89d",
+      "#ffffff",
+      "#bfa168"
+    ]
+  },
+  {
+    "id": "p4",
+    "title": "The Seta Nude Pointed Pump",
+    "category": "heels",
+    "categoryLabel": "Classic Stiletto",
+    "priceEUR": 890,
+    "image": "assets/products/p4.png",
+    "badge": "Maison Classic",
+    "badgeType": "craft",
+    "materials": "French Box Calfskin in Blush Nude, Leather Insole",
+    "description": "The quintessential pointed stiletto pump, cut from single-piece French calfskin with seamless arch contouring and memory foam cushioning.",
+    "construction": "Blake-Stitched Leather Outsole",
+    "origin": "Karachi, Pakistan",
+    "colors": [
+      "#e7cfba",
+      "#1a1918"
+    ]
+  },
+  {
+    "id": "p5",
+    "title": "The Nocturne Ankle-Strap Block Heel",
+    "category": "heels",
+    "categoryLabel": "Architectural Pump",
+    "priceEUR": 920,
+    "image": "assets/products/p5.png",
+    "badge": "New Silhouette",
+    "badgeType": "limited",
+    "materials": "Polished Boxcalf Noir, Gold Buckle Ankle Wrap",
+    "description": "Sculptural silhouette combining clean geometric lines, an empowering flared block heel, and a delicate ankle strap for poise and stability.",
+    "construction": "Cemented & Hand-Stitched Welt",
+    "origin": "Lahore, Pakistan",
+    "colors": [
+      "#141416",
+      "#e7cfba"
+    ]
+  },
+  {
+    "id": "p6",
+    "title": "The Imperial Cognac Wingtip Brogue",
+    "category": "loafers",
+    "categoryLabel": "Bespoke Oxford",
+    "priceEUR": 1480,
+    "image": "assets/products/p6.png",
+    "badge": "Master Bottier",
+    "badgeType": "craft",
+    "materials": "Full-Grain French Museum Calf, Hand-Burnished Patina",
+    "description": "A triumph of traditional shoemaking. Features hand-punched medallion broguing, seven days of natural alcohol patina, and Goodyear-welted soles.",
+    "construction": "Hand-Stitched Goodyear Welt",
+    "origin": "Lahore, Pakistan",
+    "colors": [
+      "#8b4513",
+      "#3d2314",
+      "#1f1610"
+    ]
+  },
+  {
+    "id": "p7",
+    "title": "The Riviera Midnight Penny Loafer",
+    "category": "loafers",
+    "categoryLabel": "Bespoke Slip-On",
+    "priceEUR": 1050,
+    "image": "assets/products/p7.png",
+    "badge": "Artisan Classic",
+    "badgeType": "craft",
+    "materials": "Deep Indigo French Calfskin, Hand-Sewn Apron",
+    "description": "Impeccably balanced unlined penny loafer in rich deep navy leather, designed for effortless Mediterranean elegance with custom stacked heel.",
+    "construction": "Ultra-Flex Blake Welt",
+    "origin": "Karachi, Pakistan",
+    "colors": [
+      "#131e33",
+      "#1c1a17"
+    ]
+  },
+  {
+    "id": "p8",
+    "title": "The Sovereign Noir Oxford",
+    "category": "loafers",
+    "categoryLabel": "Formal Dress",
+    "priceEUR": 1250,
+    "image": "assets/products/p8.png",
+    "badge": "Atelier Reserve",
+    "badgeType": "craft",
+    "materials": "Mirror-Finished French Box Calf, Closed Channel Leather Sole",
+    "description": "The ultimate black-tie cap-toe oxford. Hand-waxed to an immaculate mirror shine with closed-channel Goodyear stitching and beveled waists.",
+    "construction": "Goodyear Welt with Beveled Waist",
+    "origin": "Lahore, Pakistan",
+    "colors": [
+      "#0c0c0e"
+    ]
+  },
+  {
+    "id": "p9",
+    "title": "The Crescent Monogram Evening Loafer",
+    "category": "loafers",
+    "categoryLabel": "Cocktail Slip-On",
+    "priceEUR": 1120,
+    "image": "assets/products/p9.png",
+    "badge": "Limited Run",
+    "badgeType": "limited",
+    "materials": "Velour Suede Noir, Brushed Gold Monogram Buckle",
+    "description": "A tailored evening slip-on featuring rich black velvet suede, piped silk grosgrain trim, and an engraved gold-finish maison crest.",
+    "construction": "Bespoke Blake Welt",
+    "origin": "Karachi, Pakistan",
+    "colors": [
+      "#111113",
+      "#c5a880"
+    ]
+  },
+  {
+    "id": "p10",
+    "title": "The Palazzo Double Monk Strap",
+    "category": "loafers",
+    "categoryLabel": "Bespoke Monk",
+    "priceEUR": 1390,
+    "image": "assets/products/p10.png",
+    "badge": "Artisan Edition",
+    "badgeType": "craft",
+    "materials": "Burnished Museum Calf, Solid Brass Buckles",
+    "description": "Characterized by clean twin buckled straps and a sweeping chisel toe, cut from hand-selected Tuscan hides aged in oak barrels.",
+    "construction": "Goodyear Storm Welt",
+    "origin": "Lahore, Pakistan",
+    "colors": [
+      "#231c17",
+      "#0f0e0d"
+    ]
+  },
+  {
+    "id": "p12",
+    "title": "The Alabaster Court Sneaker",
+    "category": "sneakers",
+    "categoryLabel": "Minimalist Sneaker",
+    "priceEUR": 790,
+    "image": "assets/products/p12.png",
+    "badge": "Essential",
+    "badgeType": "craft",
+    "materials": "Italian Full-Grain Nappa, Margom Rubber Cupsole",
+    "description": "Pure minimalist luxury. Italian nappa leather sneakers with waxed organic cotton laces and an ultra-durable stitched Margom rubber sole.",
+    "construction": "Stitched Rubber Cupsole",
+    "origin": "Islamabad, Pakistan",
+    "colors": [
+      "#f4f1ea",
+      "#ded9cf"
+    ]
+  },
+  {
+    "id": "p13",
+    "title": "The Stratus 01 Cream Runner",
+    "category": "sneakers",
+    "categoryLabel": "Runway Sneaker",
+    "priceEUR": 980,
+    "image": "assets/products/p13.png",
+    "badge": "Campaign Icon",
+    "badgeType": "limited",
+    "materials": "French Suede, Technical Knit, Ripple Gum Sole",
+    "description": "As worn in our campaign film. Architectural silhouette featuring a carbon-fiber arch shank and an aggressive ripple gum outsole for urban grip.",
+    "construction": "Blake-Welted Runner Construction",
+    "origin": "Lahore, Pakistan",
+    "colors": [
+      "#dfd7cb",
+      "#8b5a2b",
+      "#1e2430"
+    ]
+  },
+  {
+    "id": "p14",
+    "title": "The Cloud Platform Trainer",
+    "category": "sneakers",
+    "categoryLabel": "Sculptural Trainer",
+    "priceEUR": 920,
+    "image": "assets/products/p14.png",
+    "badge": "New Arrival",
+    "badgeType": "limited",
+    "materials": "Chalk White Calfskin, Cloud EVA Ergonomic Sole",
+    "description": "Engineered with ultra-lightweight high-rebound cushioning encased in supple Italian leather uppers, providing all-day cloud-like elevation.",
+    "construction": "Ergonomic Molded Platform",
+    "origin": "Karachi, Pakistan",
+    "colors": [
+      "#ffffff",
+      "#eae6de"
+    ]
+  },
+  {
+    "id": "p15",
+    "title": "The Phantom Shadow Runner",
+    "category": "sneakers",
+    "categoryLabel": "Avant-Garde Sneaker",
+    "priceEUR": 1080,
+    "image": "assets/products/p15.png",
+    "badge": "Runway Capsule",
+    "badgeType": "limited",
+    "materials": "Matte Noir Calfskin, Sculptural Chrome Shank",
+    "description": "An aggressive, futuristic design infused with avant-garde atelier flair. Finished with reflective gunmetal accents and padded collar.",
+    "construction": "Carbon-Fiber Stabilizer Soling",
+    "origin": "Lahore, Pakistan",
+    "colors": [
+      "#121214",
+      "#55555c"
+    ]
+  },
+  {
+    "id": "p16",
+    "title": "The Obsidian Chelsea Boot",
+    "category": "boots",
+    "categoryLabel": "Haute Boot",
+    "priceEUR": 1380,
+    "image": "assets/products/p16.png",
+    "badge": "Masterpiece",
+    "badgeType": "craft",
+    "materials": "Single-Piece French Box Calf, Ebony Stacked Heel",
+    "description": "Cut from a seamless whole-cut hide with deep obsidian mirror finish. Built over an elongated almond last with Blake-stitched Italian outsoles.",
+    "construction": "Handcrafted Blake Welt",
+    "origin": "Lahore, Pakistan",
+    "colors": [
+      "#09090b",
+      "#261f1d"
+    ]
+  },
+  {
+    "id": "p17",
+    "title": "The Slip-On Knit Blush Sneaker",
+    "category": "sneakers",
+    "categoryLabel": "Comfort Luxe",
+    "priceEUR": 850,
+    "image": "assets/products/p17.png",
+    "badge": "Best Seller",
+    "badgeType": "craft",
+    "materials": "3D Engineered Rose Knit, Anatomical Memory Arch Footbed",
+    "description": "Seamless sock-like comfort meets designer elegance. Knitted from breathable rose yarns with a sculptural wave sole and leather pull tab.",
+    "construction": "Slip-On Sock Construction",
+    "origin": "Islamabad, Pakistan",
+    "colors": [
+      "#e8b4b8",
+      "#ffffff"
+    ]
+  },
+  {
+    "id": "p18",
+    "title": "The Metro Platinum Runner",
+    "category": "sneakers",
+    "categoryLabel": "Runway Sneaker",
+    "priceEUR": 990,
+    "image": "assets/products/p18.png",
+    "badge": "Limited Edition",
+    "badgeType": "limited",
+    "materials": "Silver Metallic Calfskin, Off-White Suede Panels",
+    "description": "Capturing metropolitan skylines with platinum silver paneling, geometric lace cages, and dual-density shock absorbing midsoles.",
+    "construction": "Technical Athletic Welt",
+    "origin": "Karachi, Pakistan",
+    "colors": [
+      "#e2e8f0",
+      "#ffffff",
+      "#71717a"
+    ]
+  },
+  {
+    "id": "p19",
+    "title": "The Stealth Speed Trainer",
+    "category": "sneakers",
+    "categoryLabel": "Technical Runner",
+    "priceEUR": 1020,
+    "image": "assets/products/p19.png",
+    "badge": "New Silhouette",
+    "badgeType": "limited",
+    "materials": "Technical Ballistic Mesh, Rubberized Armor Panels",
+    "description": "Designed for high velocity urban mobility. Lightweight, weather-resistant materials paired with a high-traction lug outsole.",
+    "construction": "Direct-Injected Polyurethane Sole",
+    "origin": "Sialkot, Pakistan",
+    "colors": [
+      "#18181b",
+      "#3f3f46"
+    ]
+  },
+  {
+    "id": "p20",
+    "title": "The Alpine Winter Fur Sneaker",
+    "category": "sneakers",
+    "categoryLabel": "Winter Capsule",
+    "priceEUR": 1180,
+    "image": "assets/products/p20.png",
+    "badge": "Winter Exclusive",
+    "badgeType": "limited",
+    "materials": "Waterproof White Nappa, Shearling Lambswool Lining",
+    "description": "Lined with plush Italian shearling lambswool to withstand winter cold in total comfort, finished with an ice-grip commando tread.",
+    "construction": "Norwegian Storm Welt",
+    "origin": "Gilgit, Pakistan",
+    "colors": [
+      "#ffffff",
+      "#f1ede6",
+      "#3b2f2f"
+    ]
+  }
+]

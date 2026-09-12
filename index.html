@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEP UP — Haute Maroquinerie & Footwear Maison</title>
+  <meta name="description" content="Maison STEP UP. Ultra-high-class footwear handcrafted in Lahore and Karachi. Bespoke derbies, architectural runway sneakers, and haute evening silhouettes.">
+
+  <!-- Favicon icon representation -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=3.1">
+</head>
+<body>
+
+  <!-- ========================================================================
+       SYNCHRONIZED NAVIGATION BAR
+       ======================================================================== -->
+  <header id="siteHeader" class="site-header nav-hero">
+    <div class="container header-inner">
+      <!-- Brand Identity with Athletic Speed Silhouette Logo -->
+      <a href="#hero" class="brand-logo" id="brandLogo" aria-label="Step Up Homepage">
+        <img src="assets/images/logo_white.png" alt="STEP UP Silhouette" class="brand-logo-img">
+        <span class="brand-name">STEP UP</span>
+      </a>
+
+      <!-- Synchronized Center Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="collection.html" class="nav-link">Collection</a>
+        <a href="#collections" class="nav-link">Favorites</a>
+        <a href="#atelier" class="nav-link">The Atelier</a>
+        <a href="#lookbook" class="nav-link">Lookbook</a>
+        <a href="#bespoke" class="nav-link">Bespoke VIP</a>
+        <a href="#boutiques" class="nav-link">Boutiques</a>
+      </nav>
+
+      <!-- Nav Actions (Search, Wishlist, Bag, Mobile Menu) -->
+      <div class="header-actions">
+        <!-- Search Button -->
+        <button id="openSearchBtn" class="action-icon-btn" aria-label="Search Silhouettes">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Wishlist Button -->
+        <button id="openWishlistBtn" class="action-icon-btn" aria-label="View Wishlist" onclick="showToast('Your Private Wishlist has 1 saved silhouette.')">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span id="wishlistCounter" class="badge-counter">1</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button id="openBagBtn" class="action-icon-btn" data-action="open-bag" aria-label="Open Shopping Bag">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span id="bagCounter" class="badge-counter">1</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Drawer -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer" aria-hidden="true">
+    <a href="#hero" class="nav-link">Home / Campaign</a>
+    <a href="collection.html" class="nav-link">Collection</a>
+    <a href="#collections" class="nav-link">Featured Favorites</a>
+    <a href="#atelier" class="nav-link">The Atelier & Craft</a>
+    <a href="#lookbook" class="nav-link">Runway Lookbook</a>
+    <a href="#bespoke" class="nav-link">Bespoke VIP Salon</a>
+    <a href="#boutiques" class="nav-link">Global Boutiques</a>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION: STRICTLY BACKGROUND MEDIA (PC/MOBILE) & NAV BAR
+         Seamlessly cross-fades into static image when video finishes
+         ====================================================================== -->
+    <section id="hero" class="hero-section" aria-label="Haute Footwear Campaign Reel">
+      <div id="heroMediaContainer" class="hero-media-container">
+        <!-- PC Video Layer (Desktop / Tablet) -->
+        <video id="heroVideoDesktop" class="hero-media hero-video pc-only" muted playsinline autoplay preload="auto" poster="pc_bg.png">
+          <source src="pc_bg.mp4" type="video/mp4">
+        </video>
+
+        <!-- Mobile Video Layer (Smartphones) -->
+        <video id="heroVideoMobile" class="hero-media hero-video mob-only" muted playsinline autoplay preload="auto" poster="mob_bg.png">
+          <source src="mob_bg.mp4" type="video/mp4">
+        </video>
+
+        <!-- PC Static Key Visual (Revealed smoothly on video completion) -->
+        <img id="heroImageDesktop" class="hero-media hero-image pc-only" src="pc_bg.png" alt="STEP UP Luxury Footwear Campaign PC" loading="eager">
+
+        <!-- Mobile Static Key Visual (Revealed smoothly on video completion) -->
+        <img id="heroImageMobile" class="hero-media hero-image mob-only" src="mob_bg.png" alt="STEP UP Luxury Footwear Campaign Mobile" loading="eager">
+
+        <!-- Soft Vignette Filter -->
+        <div class="hero-overlay-vignette"></div>
+
+        <!-- Minimal Mobile Hero Caption (Only Mobile - Displayed on Static Picture Background) -->
+        <div class="hero-mobile-minimal mob-only" aria-hidden="true">
+          <span class="mob-min-tag">AUTUMN / WINTER 2026</span>
+          <h2 class="mob-min-title">HAUTE FOOTWEAR</h2>
+          <span class="mob-min-subtitle">ATELIER LAHORE &bull; KARACHI</span>
+        </div>
+
+        <!-- Right Corner Discover Button & Slim Animated Bar -->
+        <a href="#collections" class="hero-scroll-indicator" aria-label="Discover Footwear Collection">
+          <span class="scroll-text">DISCOVER</span>
+          <div class="scroll-line-container">
+            <div class="scroll-line-dot"></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FEATURED PRODUCT SHOWCASE: EXACT ARCHED DISPLAY & SHOP BY STYLE
+         ====================================================================== -->
+    <section id="collections" class="product-showcase-section">
+      <div class="container">
+        
+        <!-- SHOP BY STYLE CAPSULES BAR -->
+        <div class="shop-by-style-bar">
+          <div class="shop-style-label">SHOP BY<br>STYLE</div>
+          <div class="style-capsules-scroll">
+            <button class="style-capsule active" data-style="sneakers">
+              <div class="capsule-img-wrap">
+                <img src="assets/images/style_thumbs/thumb_sneakers.png" alt="Sneakers">
+              </div>
+              <span class="capsule-title">SNEAKERS</span>
+              <span class="capsule-dot"></span>
+            </button>
+
+            <button class="style-capsule" data-style="casual">
+              <div class="capsule-img-wrap">
+                <img src="assets/images/style_thumbs/thumb_casual.png" alt="Casual">
+              </div>
+              <span class="capsule-title">CASUAL</span>
+              <span class="capsule-dot"></span>
+            </button>
+
+            <button class="style-capsule" data-style="formal">
+              <div class="capsule-img-wrap">
+                <img src="assets/images/style_thumbs/thumb_formal.png" alt="Formal">
+              </div>
+              <span class="capsule-title">FORMAL</span>
+              <span class="capsule-dot"></span>
+            </button>
+
+            <button class="style-capsule" data-style="boots">
+              <div class="capsule-img-wrap">
+                <img src="assets/images/style_thumbs/thumb_boots.png" alt="Boots">
+              </div>
+              <span class="capsule-title">BOOTS</span>
+              <span class="capsule-dot"></span>
+            </button>
+
+            <button class="style-capsule" data-style="heels">
+              <div class="capsule-img-wrap">
+                <img src="assets/images/style_thumbs/thumb_sandals.png" alt="Heels & Pumps">
+              </div>
+              <span class="capsule-title">HEELS</span>
+              <span class="capsule-dot"></span>
+            </button>
+
+            <button class="style-capsule" data-style="women">
+              <div class="capsule-img-wrap">
+                <img src="assets/images/style_thumbs/thumb_women.png" alt="Women">
+              </div>
+              <span class="capsule-title">WOMEN</span>
+              <span class="capsule-dot"></span>
+            </button>
+
+            <button class="style-capsule" data-style="men">
+              <div class="capsule-img-wrap">
+                <img src="assets/images/style_thumbs/thumb_men.png" alt="Men">
+              </div>
+              <span class="capsule-title">MEN</span>
+              <span class="capsule-dot"></span>
+            </button>
+
+            <a href="collection.html" class="all-styles-link">
+              <span>ALL STYLES</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- MAIN ARCHED FAVORITES SHOWCASE -->
+        <div class="favorites-showcase-container">
+          
+          <!-- Column 1: Featured Intro Dynamic Card -->
+          <div class="favorites-intro-card">
+            <span class="featured-eyebrow" id="showcaseEyebrow">FEATURED SNEAKERS</span>
+            <div class="featured-number-watermark" id="showcaseWatermark">01</div>
+            <h2 class="featured-main-title" id="showcaseTitle">Our<br>Favorites</h2>
+            <p class="featured-desc" id="showcaseDesc">
+              Handpicked styles for every journey. Comfort, quality and timeless design.
+            </p>
+            <a href="collection.html?style=sneakers" class="view-all-btn" id="showcaseViewAllBtn">
+              <span class="arrow-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+              <span id="showcaseViewAllText">VIEW ALL</span>
+            </a>
+          </div>
+
+          <!-- Dynamic Arched Cards Track (Populated by app.js based on selected category) -->
+          <div id="archCardsRow" class="arch-cards-row">
+            <!-- Card 1: Stratus 01 Cream Runner -->
+            <article class="arch-card-wrapper" data-id="p13">
+              <div class="arch-image-frame" onclick="openQuickViewModal('p13')">
+                <img src="assets/products/p13.png" alt="The Stratus 01 Cream Runner" loading="lazy">
+                <button class="arch-quick-add-btn" data-action="quickadd" data-id="p13" aria-label="Add The Stratus 01 to Bag">+</button>
+              </div>
+              <div class="arch-card-meta">
+                <h3 class="arch-product-name" onclick="openQuickViewModal('p13')">The Stratus 01</h3>
+                <span class="arch-product-subtitle">Men &nbsp;|&nbsp; 3 Finishes</span>
+                <div class="arch-color-swatches">
+                  <span class="color-swatch-dot" style="background-color: #dfd7cb;"></span>
+                  <span class="color-swatch-dot" style="background-color: #8b5a2b;"></span>
+                  <span class="color-swatch-dot" style="background-color: #1e2430;"></span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: The Knit Blush Runner -->
+            <article class="arch-card-wrapper" data-id="p17">
+              <div class="arch-image-frame" onclick="openQuickViewModal('p17')">
+                <img src="assets/products/p17.png" alt="The Slip-On Knit Blush Sneaker" loading="lazy">
+                <button class="arch-quick-add-btn" data-action="quickadd" data-id="p17" aria-label="Add The Knit Blush to Bag">+</button>
+              </div>
+              <div class="arch-card-meta">
+                <h3 class="arch-product-name" onclick="openQuickViewModal('p17')">The Knit Blush Runner</h3>
+                <span class="arch-product-subtitle">Women &nbsp;|&nbsp; 2 Finishes</span>
+                <div class="arch-color-swatches">
+                  <span class="color-swatch-dot" style="background-color: #e8b4b8;"></span>
+                  <span class="color-swatch-dot" style="background-color: #ffffff;"></span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: The Phantom Shadow -->
+            <article class="arch-card-wrapper" data-id="p15">
+              <div class="arch-image-frame" onclick="openQuickViewModal('p15')">
+                <img src="assets/products/p15.png" alt="The Phantom Shadow Runner" loading="lazy">
+                <button class="arch-quick-add-btn" data-action="quickadd" data-id="p15" aria-label="Add The Phantom Shadow to Bag">+</button>
+              </div>
+              <div class="arch-card-meta">
+                <h3 class="arch-product-name" onclick="openQuickViewModal('p15')">The Phantom Shadow</h3>
+                <span class="arch-product-subtitle">Men &nbsp;|&nbsp; 2 Finishes</span>
+                <div class="arch-color-swatches">
+                  <span class="color-swatch-dot" style="background-color: #121214;"></span>
+                  <span class="color-swatch-dot" style="background-color: #55555c;"></span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4: The Alabaster Court Sneaker -->
+            <article class="arch-card-wrapper" data-id="p12">
+              <div class="arch-image-frame" onclick="openQuickViewModal('p12')">
+                <img src="assets/products/p12.png" alt="The Alabaster Court Sneaker" loading="lazy">
+                <button class="arch-quick-add-btn" data-action="quickadd" data-id="p12" aria-label="Add The Alabaster Court to Bag">+</button>
+              </div>
+              <div class="arch-card-meta">
+                <h3 class="arch-product-name" onclick="openQuickViewModal('p12')">The Alabaster Court</h3>
+                <span class="arch-product-subtitle">Unisex &nbsp;|&nbsp; 2 Finishes</span>
+                <div class="arch-color-swatches">
+                  <span class="color-swatch-dot" style="background-color: #f4f1ea;"></span>
+                  <span class="color-swatch-dot" style="background-color: #ded9cf;"></span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 5 / Right Editorial: "More Than Footwear" -->
+          <div class="arch-editorial-card">
+            <img src="assets/images/product_display/mountain_editorial.jpg" alt="More Than Footwear Editorial" loading="lazy">
+            <div class="arch-editorial-overlay"></div>
+            <div class="arch-editorial-content">
+              <h3 class="arch-editorial-title" id="showcaseEditorialTitle">More Than<br>Footwear</h3>
+              <div class="arch-editorial-sub" id="showcaseEditorialSub">01 / ESSENTIALS IN EVERY STEP</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BOTTOM TRUST BAR (Exact from user screenshot) -->
+        <div class="showcase-trust-bar">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+            <span>FREE WORLDWIDE SHIPPING</span>
+          </div>
+
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+              <line x1="16" y1="8" x2="2" y2="22"></line>
+              <line x1="17.5" y1="15" x2="9" y2="15"></line>
+            </svg>
+            <span>PREMIUM MATERIALS</span>
+          </div>
+
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>BUILT TO LAST</span>
+          </div>
+
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>LOVED GLOBALLY</span>
+          </div>
+
+          <div class="trust-tagline">
+            WALK &nbsp;•&nbsp; EXPLORE &nbsp;•&nbsp; BELONG
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         THE ATELIER & MASTER CRAFTSMANSHIP
+         ====================================================================== -->
+    <section id="atelier" class="section-wrapper atelier-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Centuries of Savoir-Faire</span>
+          <h2 class="section-title display-title gold-gradient-text">The Lahore & Karachi Atelier</h2>
+          <p class="section-desc">
+            Behind every Step Up silhouette lies more than 200 meticulous manual operations executed by generational Pakistani master cordwainers.
+          </p>
+        </div>
+
+        <div class="atelier-cards-grid">
+          <!-- Pillar 1 -->
+          <div class="atelier-pillar-card">
+            <span class="pillar-number">01</span>
+            <div class="pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="pillar-title">French Box Calfskin</h3>
+            <p class="pillar-text">
+              Selected exclusively from the top 1% of raw hides in the Auvergne tanneries. Steeped in natural mimosa and chestnut extracts for velvety supple strength and immaculate breathability.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="atelier-pillar-card">
+            <span class="pillar-number">02</span>
+            <div class="pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Hornbeam Wood Lasts</h3>
+            <p class="pillar-text">
+              Every shoe is pulled over hand-sculpted aged hornbeam forms designed to cradle the natural 3D contours of the human tarsal arch, distributing body weight with aerodynamic poise.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="atelier-pillar-card">
+            <span class="pillar-number">03</span>
+            <div class="pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Blake & Goodyear Welt</h3>
+            <p class="pillar-text">
+              We reject bonded adhesives in favor of dual-thread locked chain stitching through the upper, insole, and outsole. Your Step Up shoes can be resoled indefinitely across lifetimes.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="atelier-pillar-card">
+            <span class="pillar-number">04</span>
+            <div class="pillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Natural Beeswax Patina</h3>
+            <p class="pillar-text">
+              Layered over dozens of hours with natural alcohol pigments, walnut stain, and pure carnauba wax, yielding an iridescent depth of color that matures and deepens with age.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Anatomical Diagram -->
+        <div class="craft-diagram-container">
+          <div class="diagram-interactive">
+            <img src="assets/images/chelsea_boot.jpg" alt="Anatomy of Step Up Footwear">
+            <div class="diagram-hotspot hotspot-1" title="Anatomical Last Curve">1</div>
+            <div class="diagram-hotspot hotspot-2" title="Blake Lock Stitch">2</div>
+            <div class="diagram-hotspot hotspot-3" title="Tempered Steel Shank">3</div>
+          </div>
+          <div class="diagram-info-box">
+            <div class="hotspot-detail-card">
+              <h4 class="hotspot-detail-title">1. Hand-Blocked Calfskin Vamp</h4>
+              <p class="hotspot-detail-desc">Zero synthetic lining. Full-grain French calf upper is blocked over heated forms for 48 hours to lock memory tension into the leather.</p>
+            </div>
+            <div class="hotspot-detail-card">
+              <h4 class="hotspot-detail-title">2. Lock-Stitched Blake Welt</h4>
+              <p class="hotspot-detail-desc">Waxed linen thread connects the upper directly through the vegetable-tanned leather insole, providing supreme flexibility and water resistance.</p>
+            </div>
+            <div class="hotspot-detail-card">
+              <h4 class="hotspot-detail-title">3. Carbon-Fiber & Cork Core</h4>
+              <p class="hotspot-detail-desc">A granulated oak cork bed molds uniquely to your footprint within 14 days, supported by a torsional carbon-fiber stabilizing shank.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         RUNWAY LOOKBOOK & EDITORIAL GALLERY
+         ====================================================================== -->
+    <section id="lookbook" class="section-wrapper lookbook-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Editorial Campaign</span>
+          <h2 class="section-title display-title gold-gradient-text">Runway & Lookbook</h2>
+          <p class="section-desc">
+            Visual chronicles from Fashion Week and the architectural heritage of Lahore, Karachi, and Islamabad.
+          </p>
+        </div>
+
+        <div class="lookbook-masonry">
+          <div class="lookbook-card featured-large">
+            <img src="assets/images/campaign_editorial.jpg" alt="Campaign Skyline Runway" loading="lazy">
+            <div class="lookbook-overlay">
+              <span class="lookbook-tag">EDITORIAL LOOK 01</span>
+              <h3 class="lookbook-heading">Metropolitan Dusk — Lahore Gulberg</h3>
+              <a href="#collections" class="lookbook-link">Shop The Silhouette →</a>
+            </div>
+          </div>
+
+          <div class="lookbook-card">
+            <img src="assets/images/runway_sneaker.jpg" alt="Runway Noir Collection" loading="lazy">
+            <div class="lookbook-overlay">
+              <span class="lookbook-tag">EDITORIAL LOOK 02</span>
+              <h3 class="lookbook-heading">The Obsidian Runner</h3>
+              <a href="#collections" class="lookbook-link">Shop The Silhouette →</a>
+            </div>
+          </div>
+
+          <div class="lookbook-card">
+            <img src="assets/images/derby_shoe.jpg" alt="Bespoke Patina Salon" loading="lazy">
+            <div class="lookbook-overlay">
+              <span class="lookbook-tag">EDITORIAL LOOK 03</span>
+              <h3 class="lookbook-heading">Old City Lahore Patina Study</h3>
+              <a href="#collections" class="lookbook-link">Shop The Silhouette →</a>
+            </div>
+          </div>
+
+          <div class="lookbook-card featured-large">
+            <img src="assets/images/chelsea_boot.jpg" alt="Haute Boot Edition" loading="lazy">
+            <div class="lookbook-overlay">
+              <span class="lookbook-tag">EDITORIAL LOOK 04</span>
+              <h3 class="lookbook-heading">Monochrome Grandeur</h3>
+              <a href="#collections" class="lookbook-link">Shop The Silhouette →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         BESPOKE VIP SALON & PRIVATE FITTING
+         ====================================================================== -->
+    <section id="bespoke" class="section-wrapper bespoke-section">
+      <div class="container">
+        <div class="bespoke-wrapper">
+          <div class="bespoke-grid">
+            <div class="bespoke-info">
+              <span class="section-eyebrow">Private Client Experience</span>
+              <h2 class="display-title gold-gradient-text" style="font-size:2.2rem; margin:0.6rem 0 1rem;">Bespoke Fitting Salon</h2>
+              <p style="color:var(--platinum-dim); font-size:0.92rem; line-height:1.7;">
+                Experience master bottier shoemaking tailored exclusively to the anatomical nuances of your feet. During a private 90-minute salon appointment, your personal master artisan will measure 24 dimensional points and carve your individual wooden last.
+              </p>
+              
+              <div class="bespoke-perks">
+                <div class="perk-row">
+                  <div class="perk-icon">✦</div>
+                  <div class="perk-text">
+                    <h5>Individual Hornbeam Last</h5>
+                    <p>Archived permanently in our Florentine cellar for lifetime re-orders.</p>
+                  </div>
+                </div>
+                <div class="perk-row">
+                  <div class="perk-icon">✦</div>
+                  <div class="perk-text">
+                    <h5>Leather Vault Access</h5>
+                    <p>Select rare hides, museum calfskins, and exotic finishes unavailable in standard collections.</p>
+                  </div>
+                </div>
+                <div class="perk-row">
+                  <div class="perk-icon">✦</div>
+                  <div class="perk-text">
+                    <h5>Gold Foil Monogramming</h5>
+                    <p>Complimentary interior debossing of your personal initials and crest.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking Form -->
+            <form id="bespokeBookingForm" class="bespoke-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="clientName">Full Name</label>
+                  <input type="text" id="clientName" class="form-input" placeholder="e.g. Lord Julian Sterling" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="clientEmail">Private Email</label>
+                  <input type="email" id="clientEmail" class="form-input" placeholder="e.g. julian@mansion.com" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="salonSelect">Select Flagship Salon</label>
+                  <select id="salonSelect" class="form-select" required>
+                    <option value="Lahore MM Alam">Lahore — MM Alam Road, Gulberg III</option>
+                    <option value="Karachi Clifton">Karachi — E-Street, Clifton Block 4</option>
+                    <option value="Islamabad Blue Area">Islamabad — Beverly Centre, Blue Area</option>
+                    <option value="Faisalabad Kohinoor">Faisalabad — Kohinoor City Salon</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="serviceSelect">Service Desired</label>
+                  <select id="serviceSelect" class="form-select" required>
+                    <option value="Bespoke Last Carving">Full Bespoke (Individual Last Carving)</option>
+                    <option value="Made to Measure Runner">Made-to-Measure Runway Sneaker</option>
+                    <option value="Patina Consultation">Custom Hand Patina Workshop</option>
+                    <option value="VIP Private Fitting">VIP Private Fitting & Champagne Reception</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="bookingDate">Preferred Date</label>
+                  <input type="date" id="bookingDate" class="form-input" required value="2026-09-25">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="clientPhone">Telephone / WhatsApp</label>
+                  <input type="tel" id="clientPhone" class="form-input" placeholder="+92 300 848 8800">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="clientNotes">Special Requests & Sizing Requirements</label>
+                <textarea id="clientNotes" class="form-textarea" rows="3" placeholder="Inform our master artisan of any orthopedic needs, leather preferences, or event timelines..."></textarea>
+              </div>
+
+              <button type="submit" class="cta-luxury-btn" style="width:100%; justify-content:center; margin-top:0.5rem;">
+                <span>CONFIRM PRIVATE APPOINTMENT</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         GLOBAL BOUTIQUES SECTION
+         ====================================================================== -->
+    <section id="boutiques" class="section-wrapper boutiques-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">International Salons</span>
+          <h2 class="section-title display-title gold-gradient-text">Flagship Boutiques & Salons</h2>
+          <p class="section-desc">
+            Visit our architectural boutique salons for private consultations and custom shoe fittings across Pakistan.
+          </p>
+        </div>
+
+        <div class="boutiques-grid">
+          <div class="boutique-card">
+            <h3 class="boutique-city">Lahore</h3>
+            <p class="boutique-address">14-C/1, MM Alam Road, Gulberg III, Lahore, Pakistan</p>
+            <div class="boutique-hours">
+              <span>Mon – Sat: 11:00 – 21:30</span>
+              <span style="color:var(--gold-warm);">Master Bottier Atelier</span>
+            </div>
+          </div>
+
+          <div class="boutique-card">
+            <h3 class="boutique-city">Karachi</h3>
+            <p class="boutique-address">Plot 5-E, 2nd Commercial St, E-Street, Clifton Block 4, Karachi, Pakistan</p>
+            <div class="boutique-hours">
+              <span>Mon – Sat: 11:30 – 22:00</span>
+              <span style="color:var(--gold-warm);">Haute VIP Salon</span>
+            </div>
+          </div>
+
+          <div class="boutique-card">
+            <h3 class="boutique-city">Islamabad</h3>
+            <p class="boutique-address">Ground Floor, Beverly Centre, Jinnah Avenue, Blue Area, Islamabad, Pakistan</p>
+            <div class="boutique-hours">
+              <span>Mon – Sat: 11:00 – 21:00</span>
+              <span style="color:var(--gold-warm);">Private Fitting Suite</span>
+            </div>
+          </div>
+
+          <div class="boutique-card">
+            <h3 class="boutique-city">Faisalabad</h3>
+            <p class="boutique-address">Kohinoor City, Jaranwala Road, Faisalabad, Pakistan</p>
+            <div class="boutique-hours">
+              <span>Mon – Sat: 12:00 – 21:30</span>
+              <span style="color:var(--gold-warm);">Heritage Leather Lounge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       MAISON FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-header">
+            <img src="assets/images/logo_gold.png" alt="STEP UP Atelier Silhouette" class="footer-brand-logo-img">
+            <span class="brand-name">STEP UP</span>
+          </div>
+          <span class="brand-tagline">ATELIER LAHORE<span class="tagline-dot">&bull;</span>KARACHI</span>
+          <p class="footer-brand-desc">
+            The pinnacle of footwear architecture. Generational craftsmanship, uncompromised materials, and the timeless dignity of Pakistani bespoke leathercraft.
+          </p>
+          <div style="font-size:0.75rem; color:var(--gold-warm); letter-spacing:0.15em;">
+            PRIVATE CONCIERGE: +92 (0) 42 3578 8800 &nbsp;|&nbsp; WHATSAPP: +92 300 848 8800
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Maison</h4>
+          <ul class="footer-links">
+            <li><a href="#collections">The Silhouettes</a></li>
+            <li><a href="#atelier">Atelier Savoir-Faire</a></li>
+            <li><a href="#lookbook">Editorial Lookbook</a></li>
+            <li><a href="#bespoke">Bespoke Fitting</a></li>
+            <li><a href="#boutiques">Flagship Boutiques</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Client Care</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="showToast('Complimentary insured nationwide express delivery across Pakistan via TCS & Leopard Express.')">Insured Courier Delivery</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Complimentary lifetime resoling & reconditioning at our Gulberg Atelier, Lahore.')">Lifetime Resoling Guarantee</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Authenticity certificate embedded with tamper-proof cryptographic verification.')">NFC Digital Authenticity</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Hand-carved Himalayan cedar shoe trees included with all footwear.')">Shoe Care & Cedar Trees</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Private Concierge is online 24/7 via WhatsApp: +92 300 848 8800.')">Private Client Concierge</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-newsletter-box">
+          <h4>Private Client Gazette</h4>
+          <p>Receive private invitations to capsule previews, runway allocations, and bespoke salon dates.</p>
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Your private email" required>
+            <button type="submit" class="newsletter-btn">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 STEP UP FOOTWEAR ATELIER (PVT) LTD. ALL RIGHTS RESERVED. NTN: 8492014-7 | INCORPORATED IN PAKISTAN.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="javascript:void(0)">PRIVACY CHARTER</a>
+          <a href="javascript:void(0)">ETHICAL LEATHER PLEDGE</a>
+          <a href="javascript:void(0)">TERMS OF EXCLUSIVITY</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       SLIDE-OUT LUXURY SHOPPING BAG (CART DRAWER)
+       ======================================================================== -->
+  <div id="cartDrawerOverlay" class="cart-drawer-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Private Bag</h3>
+      <button id="closeCartDrawerBtn" class="close-drawer-btn" aria-label="Close Shopping Bag">✕</button>
+    </div>
+
+    <div id="cartItemsContainer" class="cart-body">
+      <!-- Injected dynamically by app.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Complimentary Express Courier</span>
+        <span style="color:var(--gold-warm);">Complimentary</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Bespoke Cedar Shoe Trees</span>
+        <span style="color:var(--gold-warm);">Included</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total Investment</span>
+        <span id="cartTotalAmount">€980</span>
+      </div>
+      <button id="checkoutBtn" class="checkout-btn">PROCEED TO SECURE CHECKOUT</button>
+      <div style="text-align:center; font-size:0.7rem; color:var(--platinum-muted); margin-top:0.8rem;">
+        Insured nationwide express dispatch across Pakistan from Gulberg, Lahore (TCS / Leopard / DHL).
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       PRODUCT QUICK VIEW MODAL
+       ======================================================================== -->
+  <div id="quickViewModal" class="modal-backdrop" aria-hidden="true">
+    <div class="quickview-container">
+      <button id="closeQuickViewBtn" class="close-modal-btn" aria-label="Close Quick View">✕</button>
+      <div class="quickview-grid">
+        <div class="quickview-media">
+          <img id="modalProductImage" src="assets/images/stratus_cream.jpg" alt="Footwear silhouette">
+        </div>
+        <div class="quickview-content">
+          <span id="modalProductCategory" class="quickview-category">Runway Sneaker</span>
+          <h2 id="modalProductTitle" class="quickview-title">The Stratus 01</h2>
+          <div id="modalProductPrice" class="quickview-price" data-eur-price="980">€980</div>
+          <p id="modalProductDesc" class="quickview-desc">
+            Handcrafted with French calfskin and Italian suede over an anatomical wooden last.
+          </p>
+
+          <div style="margin-bottom:1.2rem; font-size:0.82rem; color:var(--platinum-dim); display:flex; flex-direction:column; gap:0.4rem;">
+            <div><strong>Origin:</strong> <span id="modalProductOrigin">Lahore, Pakistan</span></div>
+            <div><strong>Construction:</strong> <span id="modalProductConstruction">Blake Welted</span></div>
+          </div>
+
+          <!-- Size Selector -->
+          <div class="size-selector-title">
+            <span>Select Sizing (EU / US)</span>
+            <span class="size-guide-link" onclick="showToast('True to luxury Italian size. We advise ordering your typical dress shoe size.')">Fit Guidance</span>
+          </div>
+          <div class="size-pill-grid">
+            <div class="size-pill" data-size="EU 40 / US 7">40</div>
+            <div class="size-pill" data-size="EU 41 / US 8">41</div>
+            <div class="size-pill active" data-size="EU 42 / US 9">42</div>
+            <div class="size-pill" data-size="EU 43 / US 10">43</div>
+            <div class="size-pill" data-size="EU 44 / US 11">44</div>
+            <div class="size-pill" data-size="EU 45 / US 12">45</div>
+          </div>
+
+          <!-- Monogram Personalization -->
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label class="form-label" for="modalMonogramInput">Bespoke Gold Foil Monogram (Optional, Max 3 letters)</label>
+            <input type="text" id="modalMonogramInput" class="form-input" maxlength="3" placeholder="e.g. S.U.">
+          </div>
+
+          <div class="modal-actions">
+            <button id="modalAddBagBtn" class="cta-luxury-btn" style="flex:1; justify-content:center;">
+              ADD TO SHOPPING BAG
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SEARCH MODAL OVERLAY
+       ======================================================================== -->
+  <div id="searchModal" class="search-modal-backdrop" aria-hidden="true">
+    <div class="search-container">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+        <span class="section-eyebrow" style="margin:0;">Maison Search</span>
+        <button id="closeSearchBtn" style="color:#fff; font-size:1.4rem;">✕</button>
+      </div>
+      <div class="search-input-wrapper">
+        <input type="text" id="catalogSearchInput" class="search-input" placeholder="Search boots, derbies, sneakers..." autofocus>
+      </div>
+      <div id="searchResultsList" class="search-results-list">
+        <div style="color:var(--platinum-dim); padding:1rem;">Type a silhouette name, leather, or style...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Master Application Script -->
+  <script src="js/app.js?v=3.1"></script>
+</body>
+</html>
